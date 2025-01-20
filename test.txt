@@ -1,0 +1,8 @@
+public static String findLongest(String[] arr) {
+    String longest = "";
+    for (String str: arr) {
+        if (Math.max(longest.length(), str.length()) == str.length()) { longest = str; } 
+    }
+
+    return longest;
+}
