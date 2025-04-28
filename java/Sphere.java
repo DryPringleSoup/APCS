@@ -1,15 +1,8 @@
-public class Sphere {
-    private final double radius;
-    
-    public Sphere() {
-        this.radius = 1;
-    }
-    
-    public Sphere(double r) {
-        this.radius = r;
-    }
-    
-    public double getArea() { return 4*Math.PI*radius*radius; }
-    
-    public double getVolume() { return radius*getArea()/3; }
+class Sphere extends Shape3D {
+    private double radius;
+
+    public Sphere(double radius) { this.radius = radius; }
+    double calculateVolume() { return (4.0 / 3.0) * Math.PI * Math.pow(radius, 3); }
+    double calculateSurfaceArea() { return 4 * Math.PI * Math.pow(radius, 2); }
+    public String toString() { return "Sphere (Radius: " + radius + ")"; }
 }
